@@ -1,4 +1,4 @@
-defmodule ToDoist.Todos.Task do
+defmodule Todoist.Todos.Task do
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -12,8 +12,8 @@ defmodule ToDoist.Todos.Task do
 
   schema "tasks" do
     field(:name, :string)
-    belongs_to(:assigned_to, ToDoist.Accounts.User)
-    belongs_to(:created_by, ToDoist.Accounts.User)
+    belongs_to(:assigned_to, Todoist.Accounts.User)
+    belongs_to(:created_by, Todoist.Accounts.User)
     field(:description, :string, null: false)
     field(:status, :string, default: "requested")
     field(:completed_on, :utc_datetime)

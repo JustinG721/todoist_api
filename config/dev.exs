@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :todoist_api, ToDoist.Repo,
+config :todoist_api, Todoist.Repo,
   username: "postgres",
   password: "postgres",
   database: "todoist_api_dev",
@@ -15,7 +15,7 @@ config :todoist_api, ToDoist.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :todoist_api, ToDoistWeb.Endpoint,
+config :todoist_api, TodoistWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,

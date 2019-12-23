@@ -1,12 +1,12 @@
-defmodule ToDoistWeb do
+defmodule TodoistWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use ToDoistWeb, :controller
-      use ToDoistWeb, :view
+      use TodoistWeb, :controller
+      use TodoistWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule ToDoistWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: ToDoistWeb
+      use Phoenix.Controller, namespace: TodoistWeb
 
       import Plug.Conn
-      import ToDoistWeb.Gettext
-      alias ToDoistWeb.Router.Helpers, as: Routes
+      import TodoistWeb.Gettext
+      alias TodoistWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,14 +31,14 @@ defmodule ToDoistWeb do
     quote do
       use Phoenix.View,
         root: "lib/todoist_api_web/templates",
-        namespace: ToDoistWeb
+        namespace: TodoistWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
 
-      import ToDoistWeb.ErrorHelpers
-      import ToDoistWeb.Gettext
-      alias ToDoistWeb.Router.Helpers, as: Routes
+      import TodoistWeb.ErrorHelpers
+      import TodoistWeb.Gettext
+      alias TodoistWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -53,7 +53,7 @@ defmodule ToDoistWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import ToDoistWeb.Gettext
+      import TodoistWeb.Gettext
     end
   end
 

@@ -1,11 +1,11 @@
-defmodule ToDoistWeb.Router do
-  use ToDoistWeb, :router
+defmodule TodoistWeb.Router do
+  use TodoistWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", ToDoistWeb do
+  scope "/api", TodoistWeb do
     pipe_through :api
   end
 
@@ -13,8 +13,8 @@ defmodule ToDoistWeb.Router do
     pipe_through :api
 
     forward "/graphiql", Absinthe.Plug.GraphiQL,
-      schema: ToDoistWeb.Schema,
+      schema: TodoistWeb.Schema,
       interface: :simple,
-      context: %{pubsub: ToDoistWeb.Endpoint}
+      context: %{pubsub: TodoistWeb.Endpoint}
   end
 end

@@ -1,7 +1,7 @@
-defmodule ToDoist.TaskTest do
+defmodule Todoist.TaskTest do
   use ExUnit.Case
-  use ToDoist.DataCase, async: true
-  alias ToDoist.Tasks.Task
+  use Todoist.DataCase, async: true
+  alias Todoist.Tasks.Task
 
   setup do
     users = insert_list(2, :user)

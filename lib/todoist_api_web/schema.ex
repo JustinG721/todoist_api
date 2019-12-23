@@ -1,4 +1,4 @@
-defmodule ToDoistWeb.Schema do
+defmodule TodoistWeb.Schema do
   use Absinthe.Schema
 
   alias __MODULE__, as: Schema

@@ -1,7 +1,7 @@
-defmodule ToDoistWeb.Endpoint do
+defmodule TodoistWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :todoist_api
 
-  socket "/socket", ToDoistWeb.UserSocket,
+  socket "/socket", TodoistWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -40,5 +40,5 @@ defmodule ToDoistWeb.Endpoint do
     key: "_todoist_api_key",
     signing_salt: "MbhseCFC"
 
-  plug ToDoistWeb.Router
+  plug TodoistWeb.Router
 end

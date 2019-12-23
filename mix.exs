@@ -1,4 +1,4 @@
-defmodule ToDoist.MixProject do
+defmodule Todoist.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule ToDoist.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {ToDoist.Application, []},
+      mod: {Todoist.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

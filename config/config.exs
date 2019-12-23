@@ -8,16 +8,16 @@
 use Mix.Config
 
 config :todoist_api,
-  namespace: ToDoist,
-  ecto_repos: [ToDoist.Repo],
+  namespace: Todoist,
+  ecto_repos: [Todoist.Repo],
   generators: [binary_id: true]
 
 # Configures the endpoint
-config :todoist_api, ToDoistWeb.Endpoint,
+config :todoist_api, TodoistWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "4YLpPjGJSo9hXC1DzJuRwx/l3EfPDsXwwZz2Ku5UVoJjWWCD2SOwNdJDd8Coac4F",
-  render_errors: [view: ToDoistWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: ToDoist.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: TodoistWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: Todoist.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

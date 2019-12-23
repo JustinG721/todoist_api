@@ -1,4 +1,4 @@
-defmodule ToDoist.DataCase do
+defmodule Todoist.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule ToDoist.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use ToDoistWeb.DataCase, async: true`, although
+  by setting `use TodoistWeb.DataCase, async: true`, although
   this option is not recommendded for other databases.
   """
 
@@ -18,21 +18,21 @@ defmodule ToDoist.DataCase do
 
   using do
     quote do
-      alias ToDoist.Repo
+      alias Todoist.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import ToDoist.DataCase
+      import Todoist.DataCase
       import TestHelpers.ModelFactory
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ToDoist.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Todoist.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ToDoist.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Todoist.Repo, {:shared, self()})
     end
 
     :ok

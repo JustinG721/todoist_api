@@ -1,4 +1,4 @@
-defmodule ToDoistWeb.ChannelCase do
+defmodule TodoistWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule ToDoistWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint ToDoistWeb.Endpoint
+      @endpoint TodoistWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ToDoist.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Todoist.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ToDoist.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Todoist.Repo, {:shared, self()})
     end
 
     :ok

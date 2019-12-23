@@ -1,4 +1,4 @@
-# ToDoist
+# Todoist
 
 To start your Phoenix server:
 

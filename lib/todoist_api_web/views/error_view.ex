@@ -1,5 +1,5 @@
-defmodule ToDoistWeb.ErrorView do
-  use ToDoistWeb, :view
+defmodule TodoistWeb.ErrorView do
+  use TodoistWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,4 +1,4 @@
-defmodule ToDoist.Repo.Migrations.CreateUsersAndTasks do
+defmodule Todoist.Repo.Migrations.CreateUsersAndTasks do
   use Ecto.Migration
 
   def up do

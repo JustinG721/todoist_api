@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :todoist_api, ToDoist.Repo,
+config :todoist_api, Todoist.Repo,
   username: "postgres",
   password: "postgres",
   database: "todoist_api_test",
@@ -10,7 +10,7 @@ config :todoist_api, ToDoist.Repo,
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :todoist_api, ToDoistWeb.Endpoint,
+config :todoist_api, TodoistWeb.Endpoint,
   http: [port: 4002],
   server: false
 

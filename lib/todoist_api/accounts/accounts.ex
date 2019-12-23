@@ -1,6 +1,6 @@
-defmodule ToDoist.Accounts do
-  alias ToDoist.Accounts.User
-  alias ToDoist.Repo
+defmodule Todoist.Accounts do
+  alias Todoist.Accounts.User
+  alias Todoist.Repo
 
   def all_users do
     Repo.all(User)

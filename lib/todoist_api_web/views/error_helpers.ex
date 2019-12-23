@@ -1,4 +1,4 @@
-defmodule ToDoistWeb.ErrorHelpers do
+defmodule TodoistWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule ToDoistWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(ToDoistWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(TodoistWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(ToDoistWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(TodoistWeb.Gettext, "errors", msg, opts)
     end
   end
 end

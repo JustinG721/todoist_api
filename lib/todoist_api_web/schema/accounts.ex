@@ -1,6 +1,6 @@
-defmodule ToDoistWeb.Schema.Accounts do
+defmodule TodoistWeb.Schema.Accounts do
   use Absinthe.Schema.Notation
-  alias ToDoistWeb.Resolvers
+  alias TodoistWeb.Resolvers
 
   object :user do
     field :id, non_null(:id)
