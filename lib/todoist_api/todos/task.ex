@@ -1,4 +1,4 @@
-defmodule ToDoist.Tasks.Task do
+defmodule ToDoist.Todos.Task do
   use Ecto.Schema
   import Ecto.Changeset
 
