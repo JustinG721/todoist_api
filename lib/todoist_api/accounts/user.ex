@@ -1,4 +1,4 @@
-defmodule ToDoist.User do
+defmodule ToDoist.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 

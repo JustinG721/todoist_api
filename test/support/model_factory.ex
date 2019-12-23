@@ -2,7 +2,7 @@ defmodule TestHelpers.ModelFactory do
   use ExMachina.Ecto, repo: ToDoist.Repo
 
   def user_factory do
-    %ToDoist.User{
+    %ToDoist.Accounts.User{
       name: "test man",
       email: sequence(:email, &"email-#{&1}@test.com"),
       password_hash: Bcrypt.add_hash("test_password") |> Map.get(:password_hash)
@@ -10,7 +10,7 @@ defmodule TestHelpers.ModelFactory do
   end
 
   def task_factory do
-    %ToDoist.Task{
+    %ToDoist.Tasks.Task{
       name: "test task",
       assigned_to: build(:user),
       created_by: build(:user),

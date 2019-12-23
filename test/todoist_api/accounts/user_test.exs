@@ -1,7 +1,7 @@
 defmodule ToDoist.UserTest do
   use ToDoist.DataCase, async: true
   alias ToDoist.Repo
-  alias ToDoist.User
+  alias ToDoist.Accounts.User
 
   describe "changeset" do
     test "creates users provided valid data" do
