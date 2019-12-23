@@ -1,0 +1,12 @@
+/_build/
+/cover/
+/deps/
+/doc/
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+todoist_api-*.tar
+/priv/static/
+/config/*.secret.exs
+.elixir_ls/
