@@ -10,7 +10,7 @@ defmodule TestHelpers.ModelFactory do
   end
 
   def task_factory do
-    %Todoist.Tasks.Task{
+    %Todoist.Todos.Task{
       name: "test task",
       assigned_to: build(:user),
       created_by: build(:user),
